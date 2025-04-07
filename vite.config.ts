@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/artinmtr-revamp2025/',
+  base: process.env.NODE_ENV === 'production' ? '/artinmtr-revamp2025/' : '/',
   server: {
     host: true,
     port: 8080,
