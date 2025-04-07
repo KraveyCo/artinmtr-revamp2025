@@ -10,6 +10,7 @@ import MessageFromCeo from "./pages/MessageFromCeo";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./hooks/use-language";
 import { FontSizeProvider } from "./hooks/use-font-size";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
             <Toaster />
             <Sonner />
             <HashRouter>
+              <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/artwork/:id" element={<ArtworkDetail />} />
